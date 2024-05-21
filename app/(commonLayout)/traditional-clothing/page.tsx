@@ -6,7 +6,7 @@ const AllProductsPage =async () => {
     const {data} = await res.json()
     console.log(data)
     return (
-        <div>
+        <div className='grid grid-cols-3 p-5 w-[90%] m-auto'>
       {data.map(item => (
   <ProductCard key={item._id} item={item}/>
 ))}

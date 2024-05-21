@@ -1,21 +1,26 @@
+import Link from "next/link";
 
-
-const TopCategory = () => {
-    return (
-        <div className="w-[90%] mx-auto">
-            <p className="text-center text-4xl">Categories Top </p>
-            <div className="card w-96 glass">
-  <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="car!"/></figure>
-  <div className="card-body">
-    <h2 className="card-title">Life hack</h2>
-    <p>How to park your car at your garage?</p>
-    <div className="card-actions justify-end">
-      <button className="btn btn-primary">Learn now!</button>
-    </div>
-  </div>
-</div>
-        </div>
-    );
+const TopCategory = async () => {
+  const res = await fetch("http://localhost:5000/products");
+  const { data } = await res.json();
+  return (
+    <>
+      <p className="text-center text-4xl">Categories Top </p>
+      <div className="w-[90%] mx-auto grid grid-cols-3">
+        {data?.map((item) => (
+          <div key={item._id} className="card w-96 glass">
+            <div className="card-body">
+              <h2 className="card-title">{item.category}</h2>
+              <div className="card-actions justify-end">
+        
+      </div>
+             
+            </div>
+          </div>
+        ))}
+      </div>
+    </>
+  );
 };
 
 export default TopCategory;
