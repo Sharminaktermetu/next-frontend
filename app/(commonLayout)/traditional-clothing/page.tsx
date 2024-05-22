@@ -1,6 +1,7 @@
 import ProductCard from '@/app/components/products/ProductCard';
 import React from 'react';
 import SingleProduct from './[productId]/page';
+import { Item } from '@/app/type/type';
 
 const AllProductsPage = async () => {
     const res = await fetch('http://localhost:5000/products')
@@ -69,7 +70,7 @@ const AllProductsPage = async () => {
         </div>
         <div className="grid col-span-10 ">
                 <div className='grid grid-cols-3 p-5 w-[90%] m-auto'>
-              {data.map(item => (
+              {data.map((item:Item) => (
           <ProductCard key={item._id} item={item}/>
         ))}
 

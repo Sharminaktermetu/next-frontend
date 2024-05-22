@@ -1,3 +1,4 @@
+import { Item } from "@/app/type/type";
 import Image from "next/image";
 
 const AllProducts = async() => {
@@ -20,7 +21,7 @@ const AllProducts = async() => {
                     </thead>
                     <tbody>
                         {/* row 1 */}
-                      {data.map(item=>(
+                      {data.map((item:Item)=>(
                           <tr key={ item._id}>
                           <th>
                               <label>

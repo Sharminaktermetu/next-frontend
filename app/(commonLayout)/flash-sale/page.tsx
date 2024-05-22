@@ -1,3 +1,4 @@
+import { Item } from "@/app/type/type";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -11,7 +12,7 @@ const FlashSalePage = async () => {
       <div className="p-5 mx-auto w-[90%]">
         <p className="text-4xl text-center">Flash sale</p>
   <div className="grid grid-cols-3 gap-5">
-        {data?.map((item:any) => (
+        {data?.map((item:Item) => (
           <div key={item._id}>
             {item.flashSale ? (
               <div className="card bg-base-100 shadow-xl w-[95%]">

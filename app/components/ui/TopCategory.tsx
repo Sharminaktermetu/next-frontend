@@ -1,3 +1,4 @@
+import { Item } from "@/app/type/type";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -10,7 +11,7 @@ const TopCategory = async () => {
       <p className="text-center text-4xl my-6 font-semibold"> Top <span className="text-orange-400">Categories</span></p>
       <hr className="w-52 m-auto  border-y-2"/>
       <div className="w-[90%] mx-auto grid grid-cols-3 mt-7">
-        {data?.map((item) => (
+        {data?.map((item:Item) => (
           <div key={item._id} className="card w-96 glass">
          
            

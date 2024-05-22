@@ -1,8 +1,9 @@
+import { Item } from "@/app/type/type";
 import Image from "next/image";
 import Link from "next/link";
 
 
-const ProductCard = ({item}) => {
+const ProductCard = ({item}:{item:Item}) => {
   
     return (
       <div className="card bg-base-100 shadow-xl w-[95%]">
