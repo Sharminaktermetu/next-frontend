@@ -8,7 +8,7 @@ const Banner = () => {
   <div className="">
     <div className="max-w-4xl text-center m-auto">
       <h1 className="text-5xl font-bold">Crafting Comfort, Redefining Spaces. Your Home, Your Signature Style!</h1>
-      <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+      <p className="py-6">Provident cupiditate voluptatem et Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
     </div>
     <div className="flex gap-6">
     <div className="card w-80 h-48 bg-base-100 image-full mt-12">
