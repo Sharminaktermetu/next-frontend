@@ -4,10 +4,12 @@ import Link from "next/link";
 const TopCategory = async () => {
   const res = await fetch("http://localhost:5000/products");
   const { data } = await res.json();
+
   return (
     <>
-      <p className="text-center text-4xl my-6"> Top Categories</p>
-      <div className="w-[90%] mx-auto grid grid-cols-3">
+      <p className="text-center text-4xl my-6 font-semibold"> Top <span className="text-orange-400">Categories</span></p>
+      <hr className="w-52 m-auto  border-y-2"/>
+      <div className="w-[90%] mx-auto grid grid-cols-3 mt-7">
         {data?.map((item) => (
           <div key={item._id} className="card w-96 glass">
          
@@ -30,7 +32,7 @@ const TopCategory = async () => {
                 />
           
       </div>
-             
+     
            
           </div>
         ))}

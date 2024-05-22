@@ -2,16 +2,17 @@
 
 const MostPopular = () => {
     return (
-        <div className="w-[90%] mx-auto">
-        <p className="text-center text-4xl mt-12"> Most popular </p>
+        <div className="w-[90%] mx-auto mt-16">
+         <p className="text-center text-4xl my-6 font-semibold"> Most <span className="text-orange-400">Popular</span></p>
+         <hr className="w-40 m-auto  border-y-2"/>
         <div className="card w-96 glass">
-<figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="car!"/></figure>
+<figure><img src="https://www.farahtalibaziz.com.pk/images/thumbs/0003925_riha-saffron-lehenga-choli.jpeg" alt="car!"/></figure>
 <div className="card-body">
-<h2 className="card-title">Life hack</h2>
+<h2 className="card-title"> 
+RIHA SAFFRON LEHENGA CHOLI</h2>
 <p>How to park your car at your garage?</p>
-<div className="card-actions justify-end">
-  <button className="btn btn-primary">Learn now!</button>
-</div>
+<p>Price: $100</p>
+
 </div>
 </div>
     </div>

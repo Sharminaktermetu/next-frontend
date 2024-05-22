@@ -14,11 +14,12 @@ const FlashSale = async () => {
 
   const res = await fetch("http://localhost:5000/products");
   const { data } = await res.json();
-  console.log(data);
+
   return (
     <div className="p-5 mx-auto w-[90%]">
-      <p className="text-4xl text-center">Flash sale</p>
-      <div className="grid grid-cols-3 gap-5">
+      <p className="text-center text-4xl my-6 font-semibold"> Flash <span className="text-orange-400">Sale</span></p>
+         <hr className="w-32 m-auto  border-y-2"/>
+      <div className="grid grid-cols-3 gap-5 mt-12">
         {data?.map((items: any) => (
           <div key={items._id}>
             {items.flashSale ? (

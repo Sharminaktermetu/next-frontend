@@ -22,7 +22,7 @@ import Link from "next/link";
         <li><a>Item 3</a></li>
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">daisyUI</a>
+    <a className="btn btn-ghost text-xl">SClox</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -30,12 +30,13 @@ import Link from "next/link";
      <li> <Link href='/'>Home</Link></li>
      <li> <Link href='/traditional-clothing'>Traditional Cloth</Link></li>
      <li> <Link href='/flash-sale'>Flash sale</Link></li>
+     <li> <Link href='/dashboard'>Dashboard</Link></li>
      
   
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn">Button</a>
+    {/* <a className="btn">Button</a> */}
   </div>
 </div>
         </div>
