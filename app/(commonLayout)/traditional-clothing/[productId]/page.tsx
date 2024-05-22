@@ -1,21 +1,39 @@
+import Image from "next/image";
+
+const SingleProduct = async ({ params }: any) => {
+   const res = await fetch(`http://localhost:5000/product/${params.productId}`);
+   const data = await res.json();
+   console.log(data);
+   return (
+      <div>
+         <div className="hero min-h-screen bg-base-200">
+            <div className="hero-content flex-col lg:flex-row gap-7">
+               <Image
+                  src={data?.image}
+                  width={500}
+                  height={500}
 
 
-const SingleProduct = ({params}:any) => {
-    console.log(params)
-    return (
-        <div>
-            <div className="hero min-h-screen bg-base-200">
-  <div className="hero-content flex-col lg:flex-row">
-    <img src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg" className="max-w-sm rounded-lg shadow-2xl" />
-    <div>
-      <h1 className="text-5xl font-bold">Box Office News!</h1>
-      <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-      <button className="btn btn-primary">Get Started</button>
-    </div>
-  </div>
-</div>
-        </div>
-    );
+                  alt="Picture of the author"
+               />
+               <div>
+                  <h1 className="text-5xl font-bold">{data.name}</h1>
+                  <div className="flex gap-5">
+                     <p className="py-6">Price: {data.price}</p>
+                     <p className="py-6">{data.rating}</p>
+                  </div>
+                  <hr />
+                  <p className="py-6">{data.description}</p>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo ab error cum vero expedita voluptatum quibusdam temporibus maxime laborum voluptas.</p>
+                  <button className="btn btn-primary mt-6">Buy Now</button>
+               </div>
+            </div>
+
+         </div>
+         <hr />
+
+      </div>
+   );
 };
 
 export default SingleProduct;

@@ -3,6 +3,7 @@ import Link from "next/link";
 
 
 const ProductCard = ({item}) => {
+  
     return (
       <div className="card bg-base-100 shadow-xl w-[95%]">
       <Image
@@ -28,7 +29,7 @@ const ProductCard = ({item}) => {
         </div>
       </div>
       <div className="m-auto w-[90%] my-12 flex justify-center items-center">
-        <Link href={`/traditional-clothing/${item._id}`} className="p-3 bg-slate-500 rounded-md">View all</Link>
+        <Link href={`/traditional-clothing/${item._id}`} className="p-3 bg-slate-500 rounded-md">View Details</Link>
       </div>
     </div>
     );

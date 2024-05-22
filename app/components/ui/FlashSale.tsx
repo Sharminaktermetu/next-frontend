@@ -54,7 +54,7 @@ const FlashSale = async () => {
         ))}
       </div>
       <div className="m-auto w-[90%] my-12 flex justify-center items-center">
-        <Link href="/flash-sale" className="p-3 bg-slate-500 rounded-md">View all</Link>
+        <Link href="/flash-sale" className="p-3 bg-slate-500 rounded-md text-white">View all</Link>
       </div>
     </div>
   );

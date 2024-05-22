@@ -3,7 +3,7 @@
 const MostPopular = () => {
     return (
         <div className="w-[90%] mx-auto">
-        <p className="text-center text-4xl"> Most popular </p>
+        <p className="text-center text-4xl mt-12"> Most popular </p>
         <div className="card w-96 glass">
 <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="car!"/></figure>
 <div className="card-body">
