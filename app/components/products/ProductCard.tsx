@@ -1,19 +1,32 @@
+import Image from "next/image";
 
 
 const ProductCard = ({item}) => {
     return (
-        <div>
-            <div className="card card-compact w-80 bg-base-100 shadow-xl my-4">
-  <figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-  <div className="card-body">
-    <h2 className="card-title">Shoes!</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
-    <div className="card-actions justify-end">
-      <button className="btn btn-primary">Buy Now</button>
-    </div>
-  </div>
-</div>
+      <div className="card bg-base-100 shadow-xl w-[95%]">
+      <Image
+        src={item?.image}
+     width={200}
+     height={200}
+        sizes="(min-width: 808px) 50vw, 100vw"
+        style={{
+          margin:'auto',
+          border:'rounded',
+          objectFit: 'contain', // cover, contain, none
+        }}
+        alt="Picture of the author"
+      />
+      <div className="card-body">
+        <h2 className="card-title">
+          {item.name}
+        </h2>
+       <p>{item.description}</p>
+        <div className="flex justify-between">
+        <p className="font-bold">Price:{item.price}</p>
+        <p className="font-bold">Rating:{item.rating}</p>
         </div>
+      </div>
+    </div>
     );
 };
 

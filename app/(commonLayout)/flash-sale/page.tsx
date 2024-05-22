@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const FlashSalePage = async () => {
     const res = await fetch("http://localhost:5000/products");
     const { data } = await res.json();
@@ -10,10 +12,16 @@ const FlashSalePage = async () => {
           <div key={item._id}>
             {item.flashSale ? (
               <div className="card bg-base-100 shadow-xl">   
+              <Image
+                  src={item.image}
+                  width={500}
+                  height={500}
+                  alt="Picture of the author"
+                />
                 <div className="card-body">
                   <h2 className="card-title">
-                    Shoes!
-                    <div className="badge badge-secondary">NEW</div>
+                   price: {item.price}
+                  
                   </h2>
                 </div>
                 <button>click me</button>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 
@@ -17,27 +18,43 @@ const FlashSale = async () => {
   return (
     <div className="p-5 mx-auto w-[90%]">
       <p className="text-4xl text-center">Flash sale</p>
-<div className="grid grid-cols-2 gap-5">
-      {data?.map((item:any) => (
-        <div key={item._id}>
-          {item.flashSale ? (
-            <div className="card bg-base-100 shadow-xl">   
-              <div className="card-body">
-                <h2 className="card-title">
-                  Shoes!
-                  <div className="badge badge-secondary">NEW</div>
-                </h2>
+      <div className="grid grid-cols-3 gap-5">
+        {data?.map((items: any) => (
+          <div key={items._id}>
+            {items.flashSale ? (
+              <div className="card bg-base-100 shadow-xl w-[95%]">
+                <Image
+                  src={items?.image}
+               width={200}
+               height={200}
+                  sizes="(min-width: 808px) 50vw, 100vw"
+                  style={{
+                    margin:'auto',
+                    border:'rounded',
+                    objectFit: 'contain', // cover, contain, none
+                  }}
+                  alt="Picture of the author"
+                />
+                <div className="card-body">
+                  <h2 className="card-title">
+                    {items.name}
+                  </h2>
+                 <p>{items.description}</p>
+                  <div className="flex justify-between">
+                  <p className="font-bold">Price:{items.price}</p>
+                  <p className="font-bold">Rating:{items.rating}</p>
+                  </div>
+                </div>
               </div>
-            </div>
-            
-          ) : (
-            <p></p>
-          )}
-        </div>
-      ))}
+
+            ) : (
+              <p></p>
+            )}
+          </div>
+        ))}
       </div>
-      <div className="m-auto w-[90%] my-6">
-      <Link href="/flash-sale" className="p-3 bg-slate-500">View all</Link>
+      <div className="m-auto w-[90%] my-12 flex justify-center items-center">
+        <Link href="/flash-sale" className="p-3 bg-slate-500 rounded-md">View all</Link>
       </div>
     </div>
   );

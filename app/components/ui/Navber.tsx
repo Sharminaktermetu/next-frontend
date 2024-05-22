@@ -1,3 +1,4 @@
+import Link from "next/link";
 
  
  const Navber = () => {
@@ -25,17 +26,12 @@
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-      <li><a>Item 1</a></li>
-      <li>
-        <details>
-          <summary>Parent</summary>
-          <ul className="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-          </ul>
-        </details>
-      </li>
-      <li><a>Item 3</a></li>
+     
+     <li> <Link href='/'>Home</Link></li>
+     <li> <Link href='/traditional-clothing'>Traditional Cloth</Link></li>
+     <li> <Link href='/flash-sale'>Flash sale</Link></li>
+     
+  
     </ul>
   </div>
   <div className="navbar-end">
