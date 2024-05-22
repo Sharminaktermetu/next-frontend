@@ -2,7 +2,7 @@ import { Item } from "@/app/type/type";
 import Image from "next/image";
 
 const AllProducts = async() => {
-    const res = await fetch("http://localhost:5000/products");
+    const res = await fetch("https://next-back-sigma.vercel.app/products");
     const { data } = await res.json();
     return (
         <>

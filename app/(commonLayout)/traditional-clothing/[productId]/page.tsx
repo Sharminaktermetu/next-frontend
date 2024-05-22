@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 const SingleProduct = async ({ params }: any) => {
-   const res = await fetch(`http://localhost:5000/product/${params.productId}`);
+   const res = await fetch(`https://next-back-sigma.vercel.app/product/${params.productId}`);
    const data = await res.json();
    
    return (

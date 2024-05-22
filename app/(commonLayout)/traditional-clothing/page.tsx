@@ -4,7 +4,7 @@ import SingleProduct from './[productId]/page';
 import { Item } from '@/app/type/type';
 
 const AllProductsPage = async () => {
-    const res = await fetch('http://localhost:5000/products')
+    const res = await fetch('https://next-back-sigma.vercel.app/products')
     const { data } = await res.json()
 
     return (

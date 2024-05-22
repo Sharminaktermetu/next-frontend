@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const FlashSalePage = async () => {
-    const res = await fetch("http://localhost:5000/products",{
+    const res = await fetch("https://next-back-sigma.vercel.app/products",{
       cache:"no-store"
     });
     const { data } = await res.json();

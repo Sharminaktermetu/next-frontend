@@ -2,7 +2,7 @@ import Link from "next/link";
 
 
 const CategoryButton = async() => {
-    const res = await fetch(`http://localhost:5000/product`);
+    const res = await fetch(`https://next-back-sigma.vercel.app/product`);
     const { data } = await res.json();
     console.log(data)
     return (

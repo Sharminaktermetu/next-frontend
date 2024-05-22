@@ -2,17 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 
-
-
-
-
-
 const FlashSale = async () => {
-
-
-
-
-  const res = await fetch("http://localhost:5000/products",{
+  const res = await fetch("https://next-back-sigma.vercel.app/products",{
     next:{
       revalidate:30
     }
@@ -24,8 +15,8 @@ const FlashSale = async () => {
       <p className="text-center text-4xl my-6 font-semibold"> Flash <span className="text-orange-400">Sale</span></p>
          <hr className="w-32 m-auto  border-y-2"/>
       <div className="grid grid-cols-3 gap-5 mt-12">
-        {data?.map((items: any) => (
-          <div key={items._id}>
+        {data?.map((items:any) => (
+          <div key={items?._id}>
             {items.flashSale ? (
               <div className="card bg-base-100 shadow-xl w-[95%]">
                 <Image
@@ -42,12 +33,12 @@ const FlashSale = async () => {
                 />
                 <div className="card-body">
                   <h2 className="card-title">
-                    {items.name}
+                    {items?.name}
                   </h2>
                  <p>{items.description}</p>
                   <div className="flex justify-between">
-                  <p className="font-bold">Price:{items.price}</p>
-                  <p className="font-bold">Rating:{items.rating}</p>
+                  <p className="font-bold">Price:{items?.price}</p>
+                  <p className="font-bold">Rating:{items?.rating}</p>
                   </div>
                 </div>
               </div>
