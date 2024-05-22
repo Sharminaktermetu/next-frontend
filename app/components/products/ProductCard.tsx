@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 
 const ProductCard = ({item}) => {
@@ -25,6 +26,9 @@ const ProductCard = ({item}) => {
         <p className="font-bold">Price:{item.price}</p>
         <p className="font-bold">Rating:{item.rating}</p>
         </div>
+      </div>
+      <div className="m-auto w-[90%] my-12 flex justify-center items-center">
+        <Link href={`/traditional-clothing/${item._id}`} className="p-3 bg-slate-500 rounded-md">View all</Link>
       </div>
     </div>
     );
