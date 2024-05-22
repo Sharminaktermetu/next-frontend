@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ProductManage from "../product-management/page";
+import ProductManage from "../all-products/page";
 
 const Dashboard = () => {
   return (
